@@ -1,1 +1,0 @@
-variable "aks_name" {}

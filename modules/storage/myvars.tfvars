@@ -1,1 +1,0 @@
-storage_account_name = "mystorage-account"
