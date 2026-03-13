@@ -13,12 +13,16 @@ module "vnet" {
     sub2_name = var.sub2_name
     sub2_cicdr = var.sub2_cicdr
     nsg_name = var.nsg_name
+    rg_name = module.rg.rg_name
+    location = module.rg.location
 }
 
 module "vm" {
     source = "../../modules/vm/"
     vm_name = var.vm_name
     nic_name = var.nic_name
+    rg_name = module.rg.rg_name
+    location = module.rg-location
 
 }
 
@@ -36,4 +40,5 @@ module "webapp" {
 module "aks" {
     source = "../../modules/aks/"
     aks_name = var.aks_name
+
 }
